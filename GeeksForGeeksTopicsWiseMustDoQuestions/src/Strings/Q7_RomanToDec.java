@@ -1,0 +1,54 @@
+package Strings;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Q7_RomanToDec {
+	static int priority(Character c){
+		switch(c){
+		case 'I' : return 0;
+		case 'V' : return 1;
+		case 'X' : return 2;
+		case 'L' : return 3;
+		case 'C' : return 4;
+		case 'D' : return 5;
+		case 'M' : return 6;
+		default : return -1;
+		}
+	}
+	static int findDec(String s, HashMap<Character, Integer> map){
+		Stack<Character> stack = new Stack<>();
+		for(int i = 0; i < s.length(); i++){
+			stack.add(s.charAt(i));
+		}
+		char c = stack.pop();
+		int dec = map.get(c);
+		while(!stack.isEmpty()){
+			if(priority(c) <= priority(stack.peek())){
+				c = stack.pop();
+				dec += map.get(c);
+			}
+			else{
+				c = stack.pop();
+				dec -= map.get(c);}
+		}
+		return dec;
+	}
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		HashMap<Character, Integer> map = new HashMap<>();
+		map.put('I', 1);
+		map.put('V', 5);
+		map.put('X', 10);
+		map.put('L', 50);
+		map.put('C', 100);
+		map.put('D', 500);
+		map.put('M', 1000);
+		while (t-- > 0) {
+			String s = in.next();
+			System.out.println(findDec(s, map));
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package Strings;
+
+import java.util.Scanner;
+
+/**
+ * @author ASHU
+ *
+ */
+public class Q11_formAPlanidrome {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0){
+			int x = sc.nextInt();
+			sc.nextLine();
+			String s = new String(sc.nextLine());
+			System.out.println(s + " " + x);
+		}
+	}
+}

@@ -1,0 +1,38 @@
+package Algorithm;
+
+import java.util.Scanner;
+
+public class String_SeperateTheNumbers {
+	static String separateNumbers(String s) {
+		// Complete this function
+		if (s.charAt(0) == '0')
+			return "NO";
+
+		String start = "0";
+		for (int i = 0; i < s.length(); i++) {
+			start += s.charAt(i);
+			String next = "0";
+			for (int j = i + 1; j < s.length(); j++) {
+				if (Integer.parseInt(start) == Integer.parseInt(next) - 1)
+					System.out.println(start);
+
+				next += s.charAt(j);
+				System.out.println(start + " " + next);
+
+			}
+		}
+
+		return "----------------";
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int q = in.nextInt();
+		for (int a0 = 0; a0 < q; a0++) {
+			String s = in.next();
+			System.out.println(separateNumbers(s));
+		}
+		in.close();
+	}
+
+}

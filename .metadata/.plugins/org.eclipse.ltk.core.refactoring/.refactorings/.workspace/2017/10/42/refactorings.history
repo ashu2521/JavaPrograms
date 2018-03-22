@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;GeeksForGeeksYoutube/src/Trees/VerticalTraversal.java&apos;" deleteContents="false" description="Delete resource &apos;GeeksForGeeksYoutube/src/Trees/VerticalTraversal.java&apos;" element1="/GeeksForGeeksYoutube/src/Trees/VerticalTraversal.java" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1508493666254"/>
+</session>

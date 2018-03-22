@@ -1,0 +1,65 @@
+package Arrays;
+
+import java.util.Scanner;
+import java.util.TreeMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.PriorityQueue;
+class Value implements Comparable<Value>{
+	private int element;
+	private int freq;
+	Value(int element, int freq){
+		this.element = element;
+		this.freq = freq;
+	}
+	@Override
+	public int compareTo(Value o) {
+		// TODO Auto-generated method stub
+		return this.freq - o.freq;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		value other = (value) obj;
+		if (element != other.element)
+			return false;
+		return true;
+	}
+	public int getElement() {
+		return element;
+	}
+	public int getFreq() {
+		return freq;
+	}
+}
+
+public class SortingByFreq {
+	static void sortByFreq(int[] arr, int n)  
+		for (int i = 0; i < n; i++)
+			System.out.print(arr[i] + " ");
+		System.out.println();
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while (t-- > 0) {
+			int n = sc.nextInt();
+			int[] arr = new int[n];
+			int max = Integer.MIN_VALUE;
+			for (int i = 0; i < n; i++){
+				arr[i] = sc.nextInt();
+				if(arr[i] > max)
+					max = arr[i];
+			}
+
+			sortByFreq(arr, n);
+		}
+	}
+}

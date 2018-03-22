@@ -1,0 +1,55 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class SpiralTraversingOfMatrix {	
+
+	static void printSpiral(int[][] arr){
+		int m = 4, n = 4;
+		int start = 0;
+		int end = 0; 
+		int x = 0;
+		int i = 0, j = 0;
+		while(x < 16){
+			for(; x < 16 && j < n; j++){
+				System.out.print(arr[i][j] + " ");
+				x++;
+			}
+			i++;
+			j--;
+			for(; x < 16 && i < n; i++){
+				System.out.print(arr[i][j]+ " ");
+				x++;
+			}
+			j--;
+			i--;
+			for( ;x < 16 && j >= start; j--){
+				System.out.print(arr[i][j] + " ");
+				x++;
+			}
+			i--;
+			start++;
+			for( ;x < 16 && i >=start; i--){
+				System.out.print(arr[i][j] +" ");
+				x++;
+			}
+			j++;
+			n--;			
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0){
+			int[][] arr = new int[4][4];
+			for(int i = 0; i < 4; i++)
+				for(int j = 0;j < 4; j++)
+					arr[i][j] = sc.nextInt();			
+			
+			printSpiral(arr);
+		}
+
+	}
+
+}

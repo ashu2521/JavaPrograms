@@ -1,0 +1,26 @@
+package Strings;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Q6_RomanToDec {
+	static int findDec(String s, HashMap<String, Integer> map){
+		
+	}
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		HashMap<Character, Integer> map = new HashMap<>();
+		map.put('I', 1);
+		map.put('V', 5);
+		map.put('X', 10);
+		map.put('L', 50);
+		map.put('C', 100);
+		map.put('D', 500);
+		map.put('M', 1000);
+		while (t-- > 0) {
+			String s = in.next();
+			System.out.println(findDec(s, map));
+		}
+	}
+}

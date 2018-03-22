@@ -1,0 +1,32 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class LargestSubseqSum {
+	static int maxSubseqSum(int[] arr){
+		int curr_sum = arr[0], max_sum = arr[0], curr_max = arr[0];
+		for(int i = 1; i < arr.length; i++){
+			if(arr[i] > curr_max)
+				curr_max = arr[i];
+			else{
+				int j = i-1;
+				while(arr[j] > arr[i])
+					curr_sum -= arr[j--];
+
+				curr_max = arr[i];
+			}			
+			curr_sum += arr[i];
+			if(max_sum < curr_sum)
+				max_sum = curr_max;
+		}
+	}
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0){
+			int n = sc.nextInt();
+			int[] arr = new int[n];
+			System.out.println(maxSubseqSum(arr));
+		}
+	}
+}

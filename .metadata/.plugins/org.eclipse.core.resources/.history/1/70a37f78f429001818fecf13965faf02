@@ -1,0 +1,28 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Q3_PermutaionsOfString {
+	static void printPermutations(StringBuffer s, int i) {
+		if (i >= s.length())
+			//System.out.print(s + " ");
+			return;
+		for (int k = i; k < s.length(); k++) {
+			char x = s.charAt(k);
+			s.setCharAt(k, s.charAt(i));
+			s.setCharAt(i, x);
+			System.out.println(s + " " + i);
+			//printPermutations(s, i + 1);
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		while (t-- > 0) {
+			String s = in.next();
+			StringBuffer sb = new StringBuffer(s);
+			printPermutations(sb, 0);
+		}
+	}
+}

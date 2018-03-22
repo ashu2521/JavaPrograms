@@ -1,0 +1,30 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Q2_revWords {
+	static String rev(String word){
+		String rev = "";
+		String temp = "";
+		for(int i = 0; i < word.length(); i++){
+			if(word.charAt(i) == '.'){
+				rev += ("."+ temp);
+				temp = "";
+			}
+			else{
+				temp += word.charAt(i);
+			}	
+		}
+		rev += ("."+ temp);
+		return rev;
+		
+	}
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-- > 0){
+			String word = sc.next();
+			System.out.println(rev(word));
+		}
+	}
+}

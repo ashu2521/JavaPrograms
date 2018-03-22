@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="println" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="println"/>
+			<item value="count"/>
+			<item value="Solution"/>
+			<item value="Graph"/>
+			<item value="minHeap"/>
+			<item value="14 120 60 180 30 90 150 210 28 45 135 165 37 50 155"/>
+			<item value="Values"/>
+			<item value="]"/>
+		</list>
+		<list key="replacehistory">
+			<item value="unconnected"/>
+			<item value="Graph_Lib"/>
+			<item value="Grph"/>
+			<item value="HeapifyDown"/>
+			<item value="JessieCookie"/>
+			<item value="Values2"/>
+			<item value="}"/>
+			<item value="{"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="549" key="DIALOG_X_ORIGIN"/>
+		<item value="117" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

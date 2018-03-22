@@ -1,0 +1,23 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Q4_RecursivelyRemoveAllAdjacentDuplicates {
+	static String removeAdj(String s, String new_s, char c, int i){
+		if(i >= s.length())
+			return new_s;
+		if(s.charAt(i) == c)
+			return removeAdj(s, new_s, c, i+1);
+		else if(s.charAt(i) != c)
+			return removeAdj(s, new_s + c, s.charAt(i), i+1);
+		return "fockoff";
+	}
+	public static void main(String[] args){
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		while(t-- > 0){
+			String s = in.next();
+			System.out.println(removeAdj(s, "" , s.charAt(0), 1));
+		}
+	}
+}

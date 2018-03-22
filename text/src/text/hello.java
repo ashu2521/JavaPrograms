@@ -1,0 +1,13 @@
+package text;
+
+import java.math.BigInteger;
+
+public class hello {
+	public static void main(String[] args){
+		BigInteger num1 = new BigInteger("1281293876686867867868771892731213132313534521193313810243981830138098301980931803812093811908310938190830130180812930810701");
+		BigInteger num2 = new BigInteger("3131376686867867868771892731213132313534521193313810243981830138098301980931803812093811908310938190830130180812930810701");
+		System.out.println(num1.divide(num2));
+		//boolean isPrime = num.isProbablePrime(1000000000);
+		//System.out.println(isPrime);
+	}
+}

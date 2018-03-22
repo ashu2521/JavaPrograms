@@ -1,0 +1,26 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Q4_LongestPalindromeInAString {
+	static String findLongestPalindrome(String s) {
+		for(int i = s.length(); i > 1; i--){
+			for(int j = 0; j <= s.length() - i; j++){
+				StringBuilder sb = new StringBuilder(s.substring(j, j+i+1));
+				System.out.println(sb);
+				if(sb.toString().equals(sb.reverse().toString()))
+					return sb.toString();
+			}
+		}
+		return "" + s.charAt(0);
+	}
+
+	public static void main(String[] arg){
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		while(t-- > 0){
+			String s = in.next();
+			System.out.println(findLongestPalindrome(s));
+		}
+	}
+}

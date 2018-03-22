@@ -1,0 +1,33 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class Q4_LongestPalindromeInAString {
+	static String findLongestPalindrome(String s) {
+		int i = (int) Math.ceil(s.length() / 2);
+
+		while (i > 1) {
+			boolean isPalin = false;
+			for (int m = 0; m <= s.length() - (2 * i); m++) {
+				int lo = m, hi = m + (2 * i);
+				StringBuffer s1 = new StringBuffer(s.substring(lo, lo + i));
+				StringBuffer s2 = new StringBuffer(s.substring(lo + i, hi));
+				s2.reverse();
+				System.out.println(s1 +" " + s2);
+				if (s1.equals(s2))
+					System.out.println("HIIII");
+			}
+			i--;
+		}
+		return s.charAt(0)+"";
+	}
+
+	public static void main(String[] arg){
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		while(t-- > 0){
+			String s = in.next();
+			System.out.println(findLongestPalindrome(s));
+		}
+	}
+}

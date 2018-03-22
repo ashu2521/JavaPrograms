@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package Strings;
+
+/**
+ * @author ASHU
+ *
+ */
+public class Q11_formAPlanidrome {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
